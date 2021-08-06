@@ -1,11 +1,12 @@
 import './StatusColumn.css'
 import ToDo from "./ToDo";
 export default function StatusColumn(props){
+    const filteredToDos = props.toDos.filter(todo => todo.status === props.status)
     return(
         <div className="status">
             <p>{props.status}</p>
             <section className="status__todo__card">
-                {props.toDos?.map(todo => {
+                {filteredToDos.map(todo => {
                     return <ToDo key = {todo.id} description={todo.description} />
                 })}
             </section>
