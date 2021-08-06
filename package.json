@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "react": "^17.0.2"
+  },
+  "devDependencies": {
+    "prettier": "^2.3.2"
+  }
+}
