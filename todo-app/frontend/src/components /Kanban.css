@@ -1,6 +1,9 @@
 .kanban{
     border: solid purple;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 600px;
+
+
+
 }

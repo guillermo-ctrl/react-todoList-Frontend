@@ -8,14 +8,24 @@ function App() {
   const title = "Kanban Board"
   return (
     <div>
-      <Header title={title}/>
-      <div className="app__body">
-        <InputNewToDo />
-          <Kanban/>
-      </div>
+        <header>
+            <Header title={title}/>
+        </header>
+
+
+
+        <main>
+            <div className="app__body">
+                <InputNewToDo />
+            </div>
+            <Kanban/>
+        </main>
+
+
+    <footer>
+        <p>Impressum</p>
+    </footer>
     </div>
-
-
   );
 }
 
