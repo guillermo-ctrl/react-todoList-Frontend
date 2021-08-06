@@ -1,8 +1,8 @@
 import './ToDo.css'
-export default function ToDo(){
+export default function ToDo(props){
     return(
     <div className="todo">
-        <p>Erstes ToDo. Yeah</p>
+        <p>{props.description}</p>
         <button>NEXT!!!</button>
     </div>
     );

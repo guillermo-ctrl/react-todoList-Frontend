@@ -24,10 +24,9 @@ function App() {
     const saveInput = (event) => {
       setInputText(event.target.value)
       console.log("Value: ", event.target.value)
-        console.log("toDos", toDos)
     }
-
-  return (
+    console.log("toDos", toDos)
+    return (
     <div>
         <header>
             <Header title={title}/>
