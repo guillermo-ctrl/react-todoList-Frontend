@@ -1,24 +1,21 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Header from "./components /Header";
+import InputNewToDo from "./components /InputNewToDo";
+import Kanban from "./components /Kanban";
 
 function App() {
+  const title = "Kanban Board"
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header title={title}/>
+      <div className="app__body">
+        <InputNewToDo />
+          <Kanban/>
+      </div>
     </div>
+
+
   );
 }
 

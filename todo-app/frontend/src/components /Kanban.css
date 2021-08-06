@@ -1,0 +1,6 @@
+.kanban{
+    border: solid purple;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
