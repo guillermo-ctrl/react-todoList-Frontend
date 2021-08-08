@@ -1,5 +1,9 @@
-.header{
-    text-align:center;
-    border:solid black;
-    width : 100%;
+.header {
+  text-align: center;
+  font-size: 130%;
+  font-weight: bold;
+  border: solid black;
+  color: rgb(255, 3, 129);
+  background-color: rgba(174, 208, 249, 0.32);
+  height: 100%;
 }

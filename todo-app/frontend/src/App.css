@@ -1,4 +1,38 @@
-.app__main__body{
-  display: flex;
-  justify-content: center;
+.app {
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100vw;
+  margin: 0px;
+  display: grid;
+  grid-template-rows: 80px 1fr 50px;
+  grid-template-columns: 1fr;
 }
+
+.app__header {
+  border: dashed black;
+}
+.app__main {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px 1fr;
+  border: dashed darkcyan;
+}
+
+.app__footer {
+  border: dashed red;
+}
+
+.app__main__input {
+  border: solid orange;
+}
+.app__main__kanban {
+  display: grid;
+  overflow: hidden;
+  border: lawngreen;
+  background-color: yellow;
+  margin: 10px;
+  padding: 15px;
+  /*max-height: calc(100vh - (50px + 100px + 100px));*/
+}
+

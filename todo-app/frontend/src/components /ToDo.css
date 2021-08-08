@@ -1,7 +1,18 @@
-.todo{
-    border:solid greenyellow;
-    border-radius: 10px;
-    background-color: hotpink;
-
-
+.todo {
+  border: solid greenyellow;
+  border-radius: 10px;
+  background-color: hotpink;
+  margin: 3px;
+  padding: 2px;
+}
+.todo__description {
+  background-color: gray;
+  margin: 5px;
+}
+.todo__button {
+  font-size: x-small;
+  padding: 5px;
+  margin: 2px;
+  border-radius: 3px;
+  justify-self: flex-end;
 }

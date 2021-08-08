@@ -1,17 +1,24 @@
 import './StatusColumn.css'
-import ToDo from "./ToDo";
-export default function StatusColumn(props){
-    const filteredToDos = props.toDos.filter(element => (element.status === props.status))
-    return(
-        <div className="status">
-            <p>{props.status}</p>
-            <section className="status__todo__card">
-                {filteredToDos.map(todo => {
-                    return <ToDo key = {todo.id} todo={todo} handleSetNextStatus={props.handleSetNextStatus} handlesDelete={props.handlesDelete}/>
-                })}
-            </section>
-
-        </div>
-    );
-
+import ToDo from './ToDo'
+export default function StatusColumn(props) {
+  const filteredToDos = props.toDos.filter(
+    element => element.status === props.status
+  )
+  return (
+    <div className="status">
+      <p className="status__title">{props.status}</p>
+      <section className="status__cards">
+        {filteredToDos.map(todo => {
+          return (
+            <ToDo
+              key={todo.id}
+              todo={todo}
+              handleSetNextStatus={props.handleSetNextStatus}
+              handlesDelete={props.handlesDelete}
+            />
+          )
+        })}
+      </section>
+    </div>
+  )
 }

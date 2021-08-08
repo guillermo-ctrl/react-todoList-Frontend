@@ -1,5 +1,18 @@
-.status{
-    border:solid darkblue;
-    background-color: blanchedalmond;
+.status {
+  display: grid;
+  /*height: available;*/
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px 1fr;
+  overflow: hidden;
+  border: solid darkblue;
+  background-color: blanchedalmond;
+  margin: 5px;
+  text-align: center;
+}
 
+.status__title {
+}
+
+.status__cards {
+  overflow-y: scroll;
 }
