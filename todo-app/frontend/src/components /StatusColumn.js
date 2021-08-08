@@ -6,7 +6,7 @@ export default function StatusColumn(props) {
   )
   return (
     <div className="status">
-      <p className="status__title">{props.status}</p>
+      <p className="status__title">{props.status} ({filteredToDos.length})</p>
       <section className="status__cards">
         {filteredToDos.map(todo => {
           return (
