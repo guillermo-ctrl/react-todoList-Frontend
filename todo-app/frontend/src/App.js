@@ -43,9 +43,7 @@ function App() {
             description: inputText
         })
             .then(getAllToDos)
-            .catch(function (error) {
-                console.log(error);
-            });
+            .catch(e=>console.error(e))
         console.log("new ToDo posted" , inputText)
     }
 
@@ -53,7 +51,14 @@ function App() {
         setInputText(event.target.value)
         console.log("Value: ", event.target.value)
     }
-    console.log("toDos", toDos)
+
+    const deleteToDo = (event) => {
+        console.log("deleteToDo wird aufgerufen")
+        const path= "/api/todo/" + event.target.value
+        axios.delete(path)
+            .then(getAllToDos)
+            .catch(e=>console.error(e))
+    }
     return (
         <div>
             <header>
@@ -64,7 +69,7 @@ function App() {
                 <div className="app__body">
                     <InputNewToDo handleNewToDo={handleNewToDo} inputText={inputText} saveInput={saveInput}/>
                 </div>
-                <Kanban toDos={toDos} changeStatus={changeStatus}/>
+                <Kanban toDos={toDos} changeStatus={changeStatus} deleteToDo={deleteToDo}/>
             </main>
 
             <footer>
