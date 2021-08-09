@@ -16,15 +16,12 @@ function App() {
         getAllToDos()
     }, []);
     useEffect(() => {
-        console.log("Marking stuff: ", toDos)
     }, [toDos])
 
 
 
     const changeStatus = (event) => {
         const path= "/api/todo/" + event.target.value
-        console.log(path)
-
         axios.put(path, {})
             .then(getAllToDos)
             .catch(e=>console.error(e))
@@ -38,22 +35,18 @@ function App() {
     }
 
     const handleNewToDo = (event) => {
-        console.log("new item erstellen: ", inputText)
         axios.post('/api/todo', {
             description: inputText
         })
             .then(getAllToDos)
             .catch(e=>console.error(e))
-        console.log("new ToDo posted" , inputText)
     }
 
     const saveInput = (event) => {
         setInputText(event.target.value)
-        console.log("Value: ", event.target.value)
     }
 
     const deleteToDo = (event) => {
-        console.log("deleteToDo wird aufgerufen")
         const path= "/api/todo/" + event.target.value
         axios.delete(path)
             .then(getAllToDos)
