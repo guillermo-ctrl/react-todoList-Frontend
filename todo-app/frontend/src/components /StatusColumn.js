@@ -7,7 +7,7 @@ export default function StatusColumn(props){
             <p>{props.status}</p>
             <section className="status__todo__card">
                 {filteredToDos.map(todo => {
-                    return <ToDo key = {todo.id} description={todo.description} />
+                    return <ToDo key = {todo.id} description={todo.description} changeStatus={props.changeStatus} id={todo.id} />
                 })}
             </section>
 

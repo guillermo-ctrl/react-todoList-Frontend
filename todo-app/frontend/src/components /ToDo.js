@@ -3,7 +3,7 @@ export default function ToDo(props){
     return(
     <div className="todo">
         <p>{props.description}</p>
-        <button>NEXT!!!</button>
+        <button onClick={props.changeStatus} value={props.id}>NEXT!!!</button>
     </div>
     );
     }

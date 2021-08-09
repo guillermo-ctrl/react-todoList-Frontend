@@ -13,24 +13,36 @@ function App() {
     const [inputText, setInputText] = useState("")
 
     useEffect(() => {
-        fetch("/api/todo")
-            .then((response) => response.json())
-            .then((toDoArray) => setToDos(toDoArray))
-            .catch((error) => console.error(error));
+        getAllToDos()
     }, []);
     useEffect(() => {
         console.log("Marking stuff: ", toDos)
     }, [toDos])
 
 
+
+    const changeStatus = (event) => {
+        const path= "/api/todo/" + event.target.value
+        console.log(path)
+
+        axios.put(path, {})
+            .then(getAllToDos)
+            .catch(e=>console.error(e))
+
+        }
+
+    const getAllToDos = () => {
+        axios.get("/api/todo")
+            .then((response) => setToDos(response.data))
+            .catch((error) => console.error(error));
+    }
+
     const handleNewToDo = (event) => {
         console.log("new item erstellen: ", inputText)
         axios.post('/api/todo', {
             description: inputText
         })
-            .then(function (response) {
-                console.log(response);
-            })
+            .then(getAllToDos)
             .catch(function (error) {
                 console.log(error);
             });
@@ -52,7 +64,7 @@ function App() {
                 <div className="app__body">
                     <InputNewToDo handleNewToDo={handleNewToDo} inputText={inputText} saveInput={saveInput}/>
                 </div>
-                <Kanban toDos={toDos}/>
+                <Kanban toDos={toDos} changeStatus={changeStatus}/>
             </main>
 
             <footer>
