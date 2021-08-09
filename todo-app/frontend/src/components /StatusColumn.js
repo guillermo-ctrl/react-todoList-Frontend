@@ -4,7 +4,7 @@ export default function StatusColumn(props){
     const filteredToDos = props.toDos.filter(element => (element.status === props.status))
     return(
         <div className="status">
-            <p>{props.status}</p>
+            <p className="status__title">{props.status} ({filteredToDos.length})</p>
             <section className="status__todo__card">
                 {filteredToDos.map(todo => {
                     return <ToDo key = {todo.id} description={todo.description} changeStatus={props.changeStatus}

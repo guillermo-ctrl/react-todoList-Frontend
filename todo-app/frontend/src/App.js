@@ -63,7 +63,7 @@ function App() {
             </main>
 
             <footer>
-                <p>Impressum</p>
+                <p>Made with ❤️  from Linda, Guillermo, Alex & Robert.</p>
             </footer>
         </div>
     );

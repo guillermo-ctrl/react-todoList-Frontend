@@ -1,8 +1,13 @@
 .kanban{
-    border: solid purple;
+
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     height: 600px;
+
+    background-image: url("https://wallpapercave.com/wp/wp2483570.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+
 
 
 

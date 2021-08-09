@@ -1,5 +1,14 @@
 .status{
-    border:solid darkblue;
-    background-color: blanchedalmond;
 
+
+
+
+
+}
+
+.status__title{
+    text-align: center;
+    font-weight: bold;
+    text-shadow: white 3px 3px 3px;
+    color: black;
 }
