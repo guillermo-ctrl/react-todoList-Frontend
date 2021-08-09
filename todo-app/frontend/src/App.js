@@ -18,14 +18,11 @@ function App() {
     useEffect(() => {
     }, [toDos])
 
-
-
     const changeStatus = (event) => {
         const path= "/api/todo/" + event.target.value
         axios.put(path, {})
             .then(getAllToDos)
             .catch(e=>console.error(e))
-
         }
 
     const getAllToDos = () => {
